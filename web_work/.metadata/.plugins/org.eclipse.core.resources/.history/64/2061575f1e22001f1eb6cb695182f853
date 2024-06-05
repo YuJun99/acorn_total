@@ -1,0 +1,29 @@
+package test.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+/*
+ * [서블릿]
+ * 	- HttpServlet 클래스를 상속 받아서 만든다.
+ *  - service() 메소드를 오버라이드 한다.
+ *  - 어떤 경로 요청이 왔을 때 동작할지 @webServlet() 어노테이션에 경로를 설정해 준다.
+ *  
+ */
+@WebServlet("/fortune")
+public class FortuneServlet extends HttpServlet{ // 1. HttpServlet 클래스 상속받기
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		//요청을 한 클라이언트에게 문자열을 출력할 수 있는 객체의 참조값 얻어내기
+		PrintWriter pw = resp.getWriter();
+		pw.println("lucky today!");
+		pw.flush();
+		pw.close();
+	}
+}

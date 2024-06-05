@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;MemberDto.java&apos; to &apos;Step02_DataBase/src/main/java/test.member.dto&apos;&#x0D;&#x0A;- Original project: &apos;Step01_Servlet&apos;&#x0D;&#x0A;- Destination element: &apos;Step02_DataBase/src/main/java/test.member.dto&apos;&#x0D;&#x0A;- Original element: &apos;test.dto.MemberDto.java&apos;" description="Copy compilation unit" destination="=Step02_DataBase/src\/main\/java&lt;test.member.dto" element1="/src\/main\/java&lt;test.dto{MemberDto.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1717576535088" units="1" version="1.0"/>
+</session>

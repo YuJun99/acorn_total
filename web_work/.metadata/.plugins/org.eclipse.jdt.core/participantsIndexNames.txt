@@ -1,0 +1,13 @@
+INDEX VERSION 1.134
+C:\Users\user\playground\web_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1209731294.index
+\Step01_Servlet\src\main\java
+C:\Users\user\playground\web_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2086569139.index
+\Step02_DataBase\src\main\java
+C:\Users\user\playground\web_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3364582535.index
+\Step01_Servlet\src\main\java
+C:\Users\user\playground\web_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1506669115.index
+\Step01_Servlet\src\main\java
+C:\Users\user\playground\web_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2320067099.index
+\Step02_DataBase\src\main\java
+C:\Users\user\playground\web_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3984663198.index
+\Step01_Servlet\src\main\java

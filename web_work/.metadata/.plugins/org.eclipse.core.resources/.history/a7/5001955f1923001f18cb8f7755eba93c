@@ -1,0 +1,44 @@
+package test.member.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import test.member.dto.MemberDto;
+import test.util.DbcpBean;
+
+public class MemberDao {
+	
+	//회원 목록을 리턴하는 메소드 Data Access Object
+	public List<MemberDto> getList() {
+		//회원정보를 누적할 ArrayList 객체 생성
+		List<MemberDto> list = new ArrayList<MemberDto>();
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			//Connection 객체의 참조값
+			conn = new DbcpBean().getConn();
+			String sql = "SELECT NUM, NAME, ADDR"
+					+ " FROM MEMBER"
+					+ " ORDER BY NUM ASC";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(rs != null)rs.close();
+				if(conn != null)conn.close();
+				if(pstmt != null)pstmt.close();
+			}catch(Exception e) {}
+		}
+		return null;
+	}
+}
