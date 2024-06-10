@@ -1,0 +1,25 @@
+<%@page import="java.util.List"%>
+<%@page import="test.member.dao.MemberDao"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%
+	//1. 폼 전송되는 이름과 주소를 추출한다.
+	String name = request.getParameter("name");
+	String addr = request.getParameter("addr");
+
+	MemberDao dao = new MemberDao();
+	//2. DB 에 저장한다.
+	// dao.insert(dto)
+	//3. 응답한다
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>/member/insert.jsp</title>
+</head>
+<body>
+	<p>추가 되었습니다.</p>
+</body>
+</html>

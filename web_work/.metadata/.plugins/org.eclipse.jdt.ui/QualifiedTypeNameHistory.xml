@@ -14,4 +14,7 @@
     <fullyQualifiedTypeName name="oracle.jdbc.driver.DBConversion"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="test.member.dto.MemberDto"/>
+    <fullyQualifiedTypeName name="test.util.DbcpBean"/>
+    <fullyQualifiedTypeName name="java.sql.SQLData"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 </qualifiedTypeNameHistroy>
