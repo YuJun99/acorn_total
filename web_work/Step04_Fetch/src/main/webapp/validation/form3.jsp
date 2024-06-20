@@ -69,6 +69,7 @@
 			let inputNick=document.querySelector("#nick").value;
 			//만일 정규 표현식을 통과 하지 못했다면 
 			if(!reg_nick.test(inputNick)){
+				document.querySelector("#nick").classList.remove("is-valid", "is-invalid");
 				document.querySelector("#nick").classList.add("is-invalid");
 				//사용할수 없는 닉네임이라는 의미에서 false 를 넣어준다.
 				isNickValid=false;
