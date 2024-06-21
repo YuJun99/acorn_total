@@ -9,3 +9,6 @@
 6월 14, 2024 15:42:36.12 Created TensorFlow Lite XNNPACK delegate for CPU.
 6월 14, 2024 16:47:04.20 Created TensorFlow Lite XNNPACK delegate for CPU.
 6월 14, 2024 17:17:16.01 [14304:3404:0614/171716.009:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+
+6월 21, 2024 11:48:48.89 NEW SESSION
+6월 21, 2024 11:48:48.90 Created TensorFlow Lite XNNPACK delegate for CPU.

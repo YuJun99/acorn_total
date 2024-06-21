@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hello.html</title>
+<!-- vue js 로딩하기 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="one">
+		<input type="text" id="inputMsg"/>
+		<button id = "printBtn">출력하기</button>
+		<p id="result"></p>
+	</div>
+	<script>
+		document.querySelector("#printBtn").addEventListener("click", ()=>{
+			//입력한 문자열 읽어오기
+			const msg = document.querySelector("#inputMsg").value;
+			//p 요소의 innerText 로 출력하기
+			document.querySelector("#result").innerText = msg;
+		});
+	</script>
+	
+	<div id="two">
+		<input type="text" v-model="msg"/>
+		<button v-on:click="print">출력하기</button>
+		<p>msg : <strong>{{msg}}</strong></p>
+		<p>{{result}}</p>
+	</div>
+	<script>
+		//로딩된 vue js 를 활용해서 동작 정의하기
+		new Vue({
+			el:"#two",
+			data:{
+				result: "",
+				msg: ""
+			},
+			methods:{
+				print:function(){
+					this.result= this.msg;
+				}
+			}
+		});
+	</script>
+</body>
+</html>
