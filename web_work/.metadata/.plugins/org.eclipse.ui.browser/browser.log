@@ -12,3 +12,12 @@
 
 6월 21, 2024 11:48:48.89 NEW SESSION
 6월 21, 2024 11:48:48.90 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+6월 25, 2024 09:36:08.68 NEW SESSION
+6월 25, 2024 09:36:08.68 Created TensorFlow Lite XNNPACK delegate for CPU.
+6월 25, 2024 11:45:32.29 [5840:20464:0625/114532.291:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+6월 25, 2024 11:46:11.96 [5840:20140:0625/114611.961:ERROR:cert_verify_proc_builtin.cc(1051)] CertVerifyProcBuiltin for www.moneybook.co.kr failed:
+6월 25, 2024 11:46:11.96 ----- Certificate i=0 (CN=localhost,O=Default Company Ltd,L=Default City,C=XX) -----
+6월 25, 2024 11:46:11.96 ERROR: No matching issuer found
+6월 25, 2024 11:46:11.96 
+6월 25, 2024 11:46:11.96 
