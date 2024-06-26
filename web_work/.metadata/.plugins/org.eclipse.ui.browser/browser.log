@@ -21,3 +21,18 @@
 6월 25, 2024 11:46:11.96 ERROR: No matching issuer found
 6월 25, 2024 11:46:11.96 
 6월 25, 2024 11:46:11.96 
+
+6월 26, 2024 09:42:37.53 NEW SESSION
+6월 26, 2024 09:42:37.54 Created TensorFlow Lite XNNPACK delegate for CPU.
+6월 26, 2024 16:39:38.27 [25424:18472:0626/163938.274:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+6월 26, 2024 16:58:33.70 [25424:17980:0626/165833.707:ERROR:cert_verify_proc_builtin.cc(1051)] CertVerifyProcBuiltin for bootstrap.com failed:
+6월 26, 2024 16:58:33.70 ----- Certificate i=0 (CN=loadbalancer.localdomain,O=Loadbalancer.org,ST=Delaware,C=US) -----
+6월 26, 2024 16:58:33.70 ERROR: No matching issuer found
+6월 26, 2024 16:58:33.70 
+6월 26, 2024 16:58:33.70 
+6월 26, 2024 16:58:34.98 [25424:17980:0626/165834.984:ERROR:cert_verify_proc_builtin.cc(1051)] CertVerifyProcBuiltin for www.bootstrap.com failed:
+6월 26, 2024 16:58:34.98 ----- Certificate i=0 (CN=loadbalancer.localdomain,O=Loadbalancer.org,ST=Delaware,C=US) -----
+6월 26, 2024 16:58:34.98 ERROR: No matching issuer found
+6월 26, 2024 16:58:34.98 
+6월 26, 2024 16:58:34.98 
+6월 26, 2024 17:08:48.48 [25424:18472:0626/170848.486:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost

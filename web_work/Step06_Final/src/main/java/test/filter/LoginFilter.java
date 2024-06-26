@@ -21,7 +21,7 @@ import javax.servlet.http.HttpSession;
  * 	3. @WebFilter() 어노테이션을 이용해서 필터 맵핑
  */
 
-@WebFilter({"/user/private/*"})
+@WebFilter({"/user/private/*", "/file/private/*"})
 public class LoginFilter implements Filter{
 
 	@Override
