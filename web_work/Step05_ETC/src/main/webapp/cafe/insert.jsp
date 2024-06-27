@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	// 폼 전송되는 내용 읽어오기
+	//폼 전송되는 내용 읽어오기
 	String title = request.getParameter("title");
 	String content = request.getParameter("content");
 %>
@@ -23,7 +23,7 @@
 <body>
 	<div class="container">
 		<h3>글 작성한 내용입니다</h3>
-		<p>제목 : <strong><%=title %></strong></p>
+		<p> 제목 : <strong><%=title %></strong></p>
 		<div id="contents"><%=content %></div>
 		
 		<h3>글 수정 폼 입니다</h3>
@@ -39,7 +39,7 @@
 			<button type="submit" onclick="submitContents(this)">저장</button>
 		</form>
 	</div>
-
+	
 	<!-- SmartEditor 에서 필요한 javascript 로딩  -->
 	<script src="${pageContext.request.contextPath }/SmartEditor/js/HuskyEZCreator.js"></script>
 	<script>
@@ -95,6 +95,17 @@
 			var nFontSize = 24;
 			oEditors.getById["content"].setDefaultFont(sDefaultFont, nFontSize);
 		}
-	</script>
+	</script>		
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

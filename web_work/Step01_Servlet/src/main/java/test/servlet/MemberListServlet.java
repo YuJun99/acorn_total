@@ -17,7 +17,7 @@ public class MemberListServlet extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		//sample 데이터
-		List<MemberDto> members = new ArrayList<MemberDto>();
+		List<MemberDto> members=new ArrayList<>();
 		members.add(new MemberDto(1, "김구라", "노량진"));
 		members.add(new MemberDto(2, "해골", "행신동"));
 		members.add(new MemberDto(3, "원숭이", "동물원"));
@@ -32,7 +32,7 @@ public class MemberListServlet extends HttpServlet{
 		pw.println("<html>");
 		pw.println("<head>");
 		pw.println("<meta charset='utf-8'>");
-		pw.println("<title></title>");
+		pw.println("<title>회원 목록 페이지</title>");
 		pw.println("</head>");
 		pw.println("<body>");
 		pw.println("<h3>회원목록입니다</h3>");
@@ -42,12 +42,12 @@ public class MemberListServlet extends HttpServlet{
 			pw.println("<th>이름</th>");
 			pw.println("<th>주소</th>");
 		pw.println("</tr>");
-		//반복문 돌면서 실제 회원 목록을 출력!
-		for (MemberDto tmp : members) {
+		//반복문 돌면서 실제 회원 목록을 출력! (tr 이 여러개 출력이 되어야 한다.)
+		for(MemberDto tmp:members) {
 			pw.println("<tr>");
-				pw.println("<td>" + tmp.getNum() + "</td>");
-				pw.println("<td>" + tmp.getName() + "</td>");
-				pw.println("<td>" + tmp.getAddr() + "</td>");
+			pw.println("<td>"+tmp.getNum()+"</td>");
+			pw.println("<td>"+tmp.getName()+"</td>");
+			pw.println("<td>"+tmp.getAddr()+"</td>");
 			pw.println("</tr>");
 		}
 		pw.println("</table>");
@@ -56,3 +56,22 @@ public class MemberListServlet extends HttpServlet{
 		pw.close();
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

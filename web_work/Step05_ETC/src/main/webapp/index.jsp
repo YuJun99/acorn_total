@@ -19,7 +19,7 @@
 			</c:when>
 			<c:otherwise>
 				<p>
-					<strong>${sessionScope.id }</strong> 님 로그인 중...
+					<strong>${sessionScope.id }</strong> 님 로그인중...
 					<a href="${pageContext.request.contextPath }/user/logout.jsp">로그아웃</a>
 				</p>
 			</c:otherwise>
@@ -34,3 +34,12 @@
 	</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+

@@ -14,7 +14,7 @@
 </head>
 <body>
 	<div class="container">
-		<h1>새 글 작성 양식</h1>
+		<h1>새글 작성 양식</h1>
 		<form action="insert.jsp" method="post">
 			<div class="mb-2">
 				<label class="form-label" for="title">제목</label>
@@ -27,7 +27,7 @@
 			<button type="submit" onclick="submitContents(this)">저장</button>
 		</form>
 	</div>
-		<%--
+	<%--
 		[ SmartEditor 를 사용하기 위한 설정 ]
 		
 		1. webapp 에 SmartEditor  폴더를 복사해서 붙여 넣기
@@ -97,6 +97,18 @@
 			var nFontSize = 24;
 			oEditors.getById["content"].setDefaultFont(sDefaultFont, nFontSize);
 		}
-	</script>
+	</script>		
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

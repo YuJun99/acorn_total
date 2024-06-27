@@ -4,18 +4,14 @@ public class MemberDto {
 	private int num;
 	private String name;
 	private String addr;
-	
-	public MemberDto() {
-		
-	}
-	
+	//디폴트 생성자
+	public MemberDto() {}
 	public MemberDto(int num, String name, String addr) {
 		super();
 		this.num = num;
 		this.name = name;
 		this.addr = addr;
 	}
-	
 	public int getNum() {
 		return num;
 	}

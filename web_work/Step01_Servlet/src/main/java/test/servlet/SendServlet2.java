@@ -13,8 +13,8 @@ import jakarta.servlet.http.HttpServletResponse;
 public class SendServlet2 extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String msg =req.getParameter("msg");
-		System.out.println("msg: " + msg);
+		String msg=req.getParameter("msg");
+		System.out.println("msg:"+msg);
 		
 		//응답 인코딩 설정
 		resp.setCharacterEncoding("utf-8");
@@ -33,5 +33,19 @@ public class SendServlet2 extends HttpServlet{
 		pw.println("</body>");
 		pw.println("</html>");
 		pw.close();
-	}
+	}	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -13,7 +13,7 @@
 		border-radius: 50%;
 	}
 	#image{
-		display: none;
+		
 	}
 </style>
 </head>
@@ -27,7 +27,7 @@
 			</svg>
 		</a>
 		<br />
-		<input type="file" id="image" accept="image/*"/>
+		<input type="file" id="image" accept="image/*" />
 	</div>
 	<script>
 		//링크를 클릭했을때 

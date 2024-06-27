@@ -9,17 +9,18 @@ import test.util.DbcpBean;
 
 public class UserDao {
 	private static UserDao dao;
-	//static 초기화 블럭 (이 클래스가 최초로 사용되는 시점에 한 번만 발행되는 블럭)
+	//static 초기화 블럭 (이 클래스가 최초로 사용되는 시점에 한번만 빌행되는 블럭)
 	static {
 		dao=new UserDao();
 	}
-	//외부에서 객체 생성하지 못하도록 생성자의 접근 지정자를 private 로 지정
+	//외부에서 객체 생성하지 못하도록 생성자의 접근 지정자를 private 로 지정 
 	private UserDao() {}
 	//Dao 객체의 참조값을 메소드를 호출해서 받아 가도록 한다. 
 	public static UserDao getInstance() {
 		return dao;
 	}
-	//아이디를 이용해서 회원 한명의 정보를 수정하는 메소드 ( 이메일, 프로필 이미지 경로)
+	
+	//아이디를 이용해서 회원 한명의 정보를 수정하는 메소드( 이메일, 프로필 이미지 경로)
 	public boolean update(UserDto dto) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -28,9 +29,9 @@ public class UserDao {
 			//Connection Pool 로 부터 Connection 객체 하나 가져오기 
 			conn = new DbcpBean().getConn();
 			//실행할 sql 문 작성
-			String sql = "UPDATE USER_INFO"
-					+ " SET EMAIL=?, PROFILE=?"
-					+ " WHERE ID=?";
+			String sql = "UPDATE user_info"
+					+ " SET email=?, profile=?"
+					+ " WHERE id=?";
 			pstmt = conn.prepareStatement(sql);
 			// ? 에 바인딩 할 내용이 있으면 여기서 바인딩한다.
 			pstmt.setString(1, dto.getEmail());
@@ -46,7 +47,8 @@ public class UserDao {
 					pstmt.close();
 				if (conn != null)
 					conn.close();
-			} catch (Exception e) {}
+			} catch (Exception e) {
+			}
 		}
 		if (rowCount > 0) {
 			return true;
@@ -64,9 +66,9 @@ public class UserDao {
 			//Connection Pool 로 부터 Connection 객체 하나 가져오기 
 			conn = new DbcpBean().getConn();
 			//실행할 sql 문 작성
-			String sql = "UPDATE USER_INFO"
-					+ " SET PWD = ?"
-					+ " WHERE ID = ?";
+			String sql = "UPDATE user_info"
+					+ " SET pwd=?"
+					+ " WHERE id=?";
 			pstmt = conn.prepareStatement(sql);
 			// ? 에 바인딩 할 내용이 있으면 여기서 바인딩한다.
 			pstmt.setString(1, dto.getPwd());
@@ -90,10 +92,10 @@ public class UserDao {
 			return false;
 		}
 	}
-	
-	//아이디를 이용해서 회원 한 명의 정보를 리턴하는 메소드
+	//아이디를 이용해서 회원 한명의 정보를 리턴하는 메소드
 	public UserDto getData(String id) {
-		UserDto dto = null;
+		
+		UserDto dto=null;
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -102,23 +104,23 @@ public class UserDao {
 			//Connection Pool 로 부터 Connection 객체 하나 가져오기 
 			conn = new DbcpBean().getConn();
 			//실행할 sql 문 작성 
-			String sql = "SELECT ID, PWD, EMAIL, PROFILE, REGDATE"
-					+ " FROM USER_INFO"
-					+ " WHERE ID = ?";
+			String sql = "SELECT pwd, email, profile, regdate"
+					+ " FROM user_info"
+					+ " WHERE id=?";
 			pstmt = conn.prepareStatement(sql);
 			// ? 에 바인딩 할 내용이 있으면 여기서 바인딩한다.
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
-			//만일 select 된 row 가 존재하나면 cursor 를 한칸내려서
+			//만일 select 된 row 가 존재한다면 cursor 를 한칸내려서 
 			if(rs.next()) {
-				//UserDto 객체를 생성해서
-				dto = new UserDto();
-				//select 된 정보를 담아준다.
+				//UserDto 객체를 생성해서 
+				dto=new UserDto();
+				//select 된 정보를 담아준다. 
 				dto.setId(id);
-				dto.setPwd(rs.getString("PWD"));
-				dto.setEmail(rs.getString("EMAIL"));
-				dto.setProfile(rs.getString("PROFILE"));
-				dto.setRegdate(rs.getString("REGDATE"));
+				dto.setPwd(rs.getString("pwd"));
+				dto.setEmail(rs.getString("email"));
+				dto.setProfile(rs.getString("profile"));
+				dto.setRegdate(rs.getString("regdate"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -130,11 +132,14 @@ public class UserDao {
 					pstmt.close();
 				if (conn != null)
 					conn.close();
-			} catch (Exception e) {}
+			} catch (Exception e) {
+			}
 		}
+		
 		return dto;
 	}
-	//회원정보를 DB 에 저장하고 성공여부를 리턴하는 메소드 (regdate 에는 SYSDATE 를 넣어준다.)
+	
+	//회원정보를 DB 에 저장하고 성공여부를 리턴하는 메소드 ( regdate 에는 SYSDATE 를 넣어준다)
 	public boolean insert(UserDto dto) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -143,8 +148,8 @@ public class UserDao {
 			//Connection Pool 로 부터 Connection 객체 하나 가져오기 
 			conn = new DbcpBean().getConn();
 			//실행할 sql 문 작성
-			String sql = "INSERT INTO USER_INFO"
-					+ " (ID, PWD, EMAIL, PROFILE, regdate)"
+			String sql = "INSERT INTO user_info"
+					+ " (id, pwd, email, profile, regdate)"
 					+ " VALUES(?, ?, ?, ?, SYSDATE)";
 			pstmt = conn.prepareStatement(sql);
 			// ? 에 바인딩 할 내용이 있으면 여기서 바인딩한다.
@@ -172,3 +177,12 @@ public class UserDao {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+

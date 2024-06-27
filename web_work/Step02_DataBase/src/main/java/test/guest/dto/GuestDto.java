@@ -8,9 +8,7 @@ public class GuestDto {
 	private String regdate; //등록일도 String type 으로 선언한다.
 	
 	//디폴트 생성자
-	public GuestDto() {
-		
-	}
+	public GuestDto() {}
 
 	public GuestDto(int num, String writer, String content, String pwd, String regdate) {
 		super();
@@ -61,4 +59,16 @@ public class GuestDto {
 		this.regdate = regdate;
 	}
 	
+	
 }
+
+
+
+
+
+
+
+
+
+
+

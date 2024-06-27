@@ -8,10 +8,10 @@
 </head>
 <body>
 	<% 
-		//post 방식 전송했을 때 인코딩 설정을 하지 않으면 한글이 깨진다. (tomcat 10 에서는 필요 없음)
+		//post 방식 전송했을때 인코딩 설정을 하지 않으면 한글이 깨진다. ( tomcat 10 에서는 필요 없음)
 		request.setCharacterEncoding("utf-8");
 	
-		//msg 라는 파라미터 명으로 전달되는 문자열 추출
+		//msg 라는 파라미터 명으로 전달되는 문자열 추출 
 		String msg=request.getParameter("msg");
 	%>
 	<p> msg 라는 파라미터 명으로 전송된 내용 : <strong><%=msg %></strong></p>
@@ -19,3 +19,13 @@
 	<p> msg 라는 파라미터 명으로 전송된 내용 : <strong>${param.msg }</strong></p>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+

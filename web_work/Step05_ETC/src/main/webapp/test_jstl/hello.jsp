@@ -2,8 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%--
-	/WEB-INF/lib/jstl-1.2.jar 파일에서 jsp/jstl/core 라이브러리를 import 해서
-	c 라는 접두어로 사용하겠다는 의미
+	/WEB-INF/lib/jstl-1.2.jar 파일에서  jsp/jstl/core 라이브러리를 import 해서
+	c 라는 접두어로 사용하겠다는 의미  
  --%>
 <!DOCTYPE html>
 <html>
@@ -18,9 +18,25 @@
 	</c:forEach>
 	
 	<h1>순수 java code 를 이용해서 같은 동작을 한다면</h1>
-	
+	<%for(int i=0; i<10; i++){ %>
+		<p>안녕 JSTL <strong><%=i %></strong></p>
+	<%} %>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

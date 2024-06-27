@@ -20,3 +20,10 @@
 	<p>savedId 라는 키값으로 저장된 쿠키값 : <strong>${cookie.savedId.value }</strong></p>
 </body>
 </html>
+
+
+
+
+
+
+

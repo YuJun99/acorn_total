@@ -11,15 +11,15 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-//3.
+//3. 
 @WebServlet("/friend/list")
 public class FriendListServlet extends HttpServlet{//1.
 	
 	//2.
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// DB에 있는 친구 목록이라 가정하자 sample 데이터
-		List<String> names = new ArrayList<String>();
+		//DB 에 있는 친구 목록이라 가정하자 sample 데이터 
+		List<String> names=new ArrayList<>();
 		names.add("김구라");
 		names.add("해골");
 		names.add("원숭이");
@@ -38,34 +38,42 @@ public class FriendListServlet extends HttpServlet{//1.
 		pw.println("</head>");
 		pw.println("<body>");
 			pw.println("<h3>친구 목록입니다</h3>");
-			
 			pw.println("<ul>");
-				pw.println("<li>" + names.get(0) + "</li>");
-				pw.println("<li>" + names.get(1) + "</li>");
-				pw.println("<li>" + names.get(2) + "</li>");
+				pw.println("<li>"+names.get(0)+"</li>");
+				pw.println("<li>"+names.get(1)+"</li>");
+				pw.println("<li>"+names.get(2)+"</li>");
 			pw.println("</ul>");
-			
 			//반복문을 활용하면
 			pw.println("<ul>");
-			for(int i = 0; i < names.size(); i++) {
-				//names 리스트의 i 번째 아이템(String) 을 읽어와서
-				String tmp = names.get(i);
-				// li 요소 가운데 끼워서 출력하기
-				pw.println("<li>" + tmp + "</li>");
+			//반복문 돌면서 
+			for(int i=0; i<names.size(); i++) {
+				//names 리스트의 i 번째 아이템(String) 을 읽어와서 
+				String tmp=names.get(i);
+				//li 요소 가운데 끼워서 출력하기
+				pw.println("<li>"+tmp+"</li>");
 			}
 			pw.println("</ul>");
 			
 			pw.println("<ul>");
 			//확장 for 문을 활용하면?
-			for (String item : names) {
-				pw.println("<li>" + item + "</li>");
+			for(String tmp:names) {
+				pw.println("<li>"+tmp+"</li>");
 			}
 			pw.println("</ul>");
-			
 		pw.println("</body>");
 		pw.println("</html>");
 		pw.close();
 		
-
 	}
 }
+
+
+
+
+
+
+
+
+
+
+

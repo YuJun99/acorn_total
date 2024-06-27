@@ -11,14 +11,18 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-//3.
+/*
+ *  /todo/list 요청을 처리할 TodoListServlet 을 만들어 보세요
+ *  
+ *  List<String>  에  할일을 3개 담아서 할일을 ul li 를 활용해서 클라이언트에게 출력해 보세요.
+ *  
+ *  할일은 참고로  "html 공부하기" , "css 공부하기", "javascript 공부하기" 
+ */
+
 @WebServlet("/todo/list")
 public class TodoListServlet extends HttpServlet{
-	
-	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
 		List<String> todos=new ArrayList<String>();
 		todos.add("html 공부하기");
 		todos.add("css 공부하기");
@@ -34,7 +38,7 @@ public class TodoListServlet extends HttpServlet{
 		pw.println("<html>");
 		pw.println("<head>");
 		pw.println("<meta charset='utf-8'>");
-		pw.println("<title>친구 목록 페이지</title>");
+		pw.println("<title>할일 페이지</title>");
 		pw.println("</head>");
 		pw.println("<body>");
 		pw.println("<h3>할일 목록입니다.</h3>");
@@ -47,6 +51,31 @@ public class TodoListServlet extends HttpServlet{
 		pw.println("</html>");
 		pw.close();
 		
-
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

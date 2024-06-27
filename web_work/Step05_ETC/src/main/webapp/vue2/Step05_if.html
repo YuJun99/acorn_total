@@ -5,11 +5,11 @@
 <title>Step05_if.html</title>
 <style>
 	.box{
-		width: 100px;
-		height: 100px;
-		background-color:yellow;
-		border: 1px solid red;
-	}
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        border: 1px solid red;
+     }
 </style>
 </head>
 <body>
@@ -18,8 +18,10 @@
 		<!-- v-if 문서요소를 만들지 말지를 제어한다(문서 요소를 조건부로 만들고 제거하기 위해) -->
 		<div class="box" v-if="false">box1</div>
 		<div class="box" v-if="true">box2</div>
-		isMake <input type="checkbox" v-model="isMake" />
+		
+		isMake <input type="checkbox" v-model="isMake"/>
 		<div class="box" v-if="isMake">box3</div>
+		
 		isShow <input type="checkbox" v-model="isShow"/>
 		<div class="box" v-show="isShow">box4</div>
 	</div>
@@ -35,3 +37,9 @@
 	</script>
 </body>
 </html>
+
+
+
+
+
+

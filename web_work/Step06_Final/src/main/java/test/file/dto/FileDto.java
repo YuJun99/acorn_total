@@ -2,27 +2,15 @@ package test.file.dto;
 
 public class FileDto {
 	private int num;
-	private String writer; // 로그인된 사용자의 아이디
+	private String writer;  // 로그인된 사용자의 아이디 
 	private String title;
 	private String orgFileName;
 	private String saveFileName;
 	private long fileSize;
 	private String regdate;
 	
-	//디폴트 생성자
+	//디폴트 생성자 
 	public FileDto() {}
-
-	public FileDto(int num, String writer, String title, String orgFileName, String saveFileName, long fileSize,
-			String regdate) {
-		super();
-		this.num = num;
-		this.writer = writer;
-		this.title = title;
-		this.orgFileName = orgFileName;
-		this.saveFileName = saveFileName;
-		this.fileSize = fileSize;
-		this.regdate = regdate;
-	}
 
 	public int getNum() {
 		return num;
@@ -79,6 +67,5 @@ public class FileDto {
 	public void setRegdate(String regdate) {
 		this.regdate = regdate;
 	}
-	
 	
 }

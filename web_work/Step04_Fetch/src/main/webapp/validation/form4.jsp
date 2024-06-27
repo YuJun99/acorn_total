@@ -22,7 +22,7 @@
 			<div>
 				<label for="pwd">비밀번호</label>
 				<input type="password" class="form-control" name="pwd" id="pwd"/>
-				<div class="form-text">특수 문자를 제외한 5자 이상~10자 이내로 작성해 주세요</div>
+				<div class="form-text">특수 문자를 제외한 5글자 이상 10글자 이내로 작성해 주세요</div>
 				<div class="invalid-feedback">비밀 번호를 확인하세요</div>
 			</div>
 			<div>
@@ -45,7 +45,6 @@
 		let isPwdValid=false;
 		//하고싶은말 유효성 여부를 관리할 변수
 		let isCommentValid=true;
-		
 		
 		/*
 			1. 닉네임을 입력했을때 유효성 여부를 변수에 저장한다.
@@ -80,7 +79,7 @@
 			let inputNick=document.querySelector("#nick").value;
 			//만일 정규 표현식을 통과 하지 못했다면 
 			if(!reg_nick.test(inputNick)){
-				document.querySelector("#nick").classList.remove("is-valid", "is-invalid");
+				document.querySelector("#nick").classList.remove("is-valid");
 				document.querySelector("#nick").classList.add("is-invalid");
 				//사용할수 없는 닉네임이라는 의미에서 false 를 넣어준다.
 				isNickValid=false;
@@ -107,6 +106,8 @@
 				checkForm();
 			});
 		});
+		
+		
 		//비밀번호를 검증할 정규 표현식
 		const reg_pwd = /^[a-zA-Z0-9]{5,10}$/;
 		
@@ -122,6 +123,7 @@
 				document.querySelector("#pwd").classList.add("is-invalid");
 				isPwdValid=false;
 				checkForm();
+				//함수를 여기서 끝내라 (종료해라, 함수를 호출했던 곳으로 돌아가라)
 				return;
 			}
 			

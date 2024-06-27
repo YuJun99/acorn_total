@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!-- footer.jsp -->   
+<%-- /include/footer.jsp --%>
 	<!-- 하단 footer 에서 사용할 svg 이미지 -->
 	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
 	  <symbol id="bootstrap" viewBox="0 0 118 94">

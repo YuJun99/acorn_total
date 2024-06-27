@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- 
-<%
-
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,27 +10,30 @@
 </head>
 <body>
 	<%-- 
-		/include/navbar.jsp 페이지에게 이 부분을 응답하도록 한다 
-		<jsp:include page="webapp 내에서의 jsp 페이지 경로">
+		/include/navbar.jsp 페이지에게 이부분을 응답하도록 한다 
+		<jsp:include page="webapp 내에서의 jsp 페이지 경로" > 
 		
-		- include 를 시킬 때 include 될 jsp 페이지에 파라미터를 전달 할 수도 있다.
-		<jsp:param value="전달할 문자열" name="파라미터명"/>
-		
-		- 전달된 파라미터는 HttpServletRequest 객체를 이용해서 include 된 페이지에서 추출할 수가 있다.
+		- include 를 시킬때 include 될 jsp 페이지에 파라미터를 전달할수도 있다.
+		  <jsp:param value="전달할문자열"  name="파라미터명" />
+		  
+		- 전달된 파라미터는 HttpServletRequest 객체를 이용해서 include 된 페이지에서 추출할수가 있다.
 		  String result = request.getParameter("current"); // "index"
+		
 	--%>
+	
 	<jsp:include page="/include/navbar.jsp">
 		<jsp:param value="index" name="current"/>
 	</jsp:include>
+	
 	<div class="container">
 		<h1>인덱스 페이지 입니다</h1>
-		<p>컨텍스트 경로(프로젝트명) : <strong>${pageContext.request.contextPath }</strong></p>
+		<p>컨텍스트 경로(프로젝트명) : <strong>${pageContext.request.contextPath }</strong> </p>
 		<ul class="nav flex-column">
-			<li class = "nav-item"><a href="${pageContext.request.contextPath }/test.jsp">Connection 객체 얻어오기 테스트</a></li>
-			<li class = "nav-item"><a href="${pageContext.request.contextPath }/member/list.jsp">회원목록 보기</a></li>
-			<li class = "nav-item"><a href="${pageContext.request.contextPath }/guest/list.jsp">방명록</a></li>
+			<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/test.jsp">Connection 객체 얻어오기 테스트</a></li>
+			<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/member/list.jsp">회원목록 보기</a></li>
+			<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/friend/list.jsp">친구목록 보기</a></li>
+			<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/guest/list.jsp">방명록</a></li>
 		</ul>
-		
 		<div id="carouselExampleIndicators" class="carousel slide">
 		  <div class="carousel-indicators">
 		    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -67,3 +66,11 @@
 	<jsp:include page="/include/footer.jsp"></jsp:include>
 </body>
 </html>
+
+
+
+
+
+
+
+

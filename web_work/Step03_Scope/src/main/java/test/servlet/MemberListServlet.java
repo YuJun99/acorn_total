@@ -14,13 +14,13 @@ import test.member.dto.MemberDto;
 
 @WebServlet("/member/list")
 public class MemberListServlet extends HttpServlet{
-
+	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		//DB 에서 읽어온 회원 목록이라고 가정하자
-		MemberDto mem1 = new MemberDto(1, "김구라", "노량진");
-		MemberDto mem2 = new MemberDto(2, "해골", "행신동");
-		MemberDto mem3 = new MemberDto(3, "원숭이", "동물원");
-		List<MemberDto> list = new ArrayList<MemberDto>();
+		//DB 에서 읽어온 회원 목록이라고 가정하자 
+		MemberDto mem1=new MemberDto(1, "김구라", "노량진");
+		MemberDto mem2=new MemberDto(2, "해골", "행신동");
+		MemberDto mem3=new MemberDto(3, "원숭이", "동물원");
+		List<MemberDto> list=new ArrayList<MemberDto>();
 		list.add(mem1);
 		list.add(mem2);
 		list.add(mem3);
@@ -28,7 +28,24 @@ public class MemberListServlet extends HttpServlet{
 		//webapp/member/list.jsp 페이지에서 회원목록을 table 요소를 이용해서 출력하도록 해 보세요.
 		req.setAttribute("list", list);
 		
-		RequestDispatcher rd = req.getRequestDispatcher("/member/list.jsp");
+		RequestDispatcher rd=req.getRequestDispatcher("/member/list.jsp");
 		rd.forward(req, resp);
 	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

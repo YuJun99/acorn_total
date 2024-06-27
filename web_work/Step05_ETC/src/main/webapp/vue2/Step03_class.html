@@ -29,6 +29,7 @@
 		<div v-bind:class="{box:true, bigger:true, 'yellow-bg':true}">div3</div>
 		<div v-bind:class="['box', 'bigger', 'yellow-bg']">div4</div>
 		<div v-bind:class="{box:isBox, bigger:isBigger, 'yellow-bg':isYellow}">div5</div>
+		<div :class="{box:isBox, bigger:isBigger, 'yellow-bg':isYellow}">div6</div>
 		<label>
 			<input type="checkbox" v-model="isBox"> box
 		</label>
@@ -52,3 +53,14 @@
 	</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

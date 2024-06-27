@@ -7,8 +7,15 @@ public class UserDto {
 	private String profile;
 	private String regdate;
 	
-	public UserDto() {
-		
+	public UserDto() {}
+
+	public UserDto(String id, String pwd, String email, String profile, String regdate) {
+		super();
+		this.id = id;
+		this.pwd = pwd;
+		this.email = email;
+		this.profile = profile;
+		this.regdate = regdate;
 	}
 
 	public String getId() {
@@ -50,14 +57,6 @@ public class UserDto {
 	public void setRegdate(String regdate) {
 		this.regdate = regdate;
 	}
-
-	public UserDto(String id, String pwd, String email, String profile, String regdate) {
-		super();
-		this.id = id;
-		this.pwd = pwd;
-		this.email = email;
-		this.profile = profile;
-		this.regdate = regdate;
-	}
+	
 	
 }

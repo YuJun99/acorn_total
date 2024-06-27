@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	List<String> todos = new ArrayList<>();
+	List<String> todos=new ArrayList<String>();
 	todos.add("html 공부하기");
 	todos.add("css 공부하기");
 	todos.add("javascript 공부하기");
@@ -15,11 +15,14 @@
 <title>/todo/list.jsp</title>
 </head>
 <body>
-	<h3>할일 목록입니다.</h3>
+	<h3>할일 목록 입니다.</h3>
 	<ul>
-	<%for (String tmp:todos){ %>
-		<li><%=tmp %></li>
-	<%} %>
+		<%for(String tmp:todos){ %>
+			<li><%=tmp %></li>
+		<%} %>
 	</ul>
 </body>
 </html>
+
+
+

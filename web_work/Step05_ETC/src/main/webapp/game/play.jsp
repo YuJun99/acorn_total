@@ -11,7 +11,7 @@
 		<p>${id } 님 반갑습니다</p>
 		<p>회원 전용 공간입니다</p>
 		<p>신나게 놀아 보아요</p>
-		<a href="${pageContext.request.contextPath }/index.jsp">인덱스로</a>
+		<a href="${pageContext.request.contextPath }/">인덱스로</a>
 	</div>
 </body>
 </html>
